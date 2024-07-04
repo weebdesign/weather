@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>increment-decrement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: black;
+margin: auto;
+font-family: Arial, Helvetica, sans-serif;
+font-style: italic;">
+    <div class="container" style="margin-top: 2rem;">
+
+        <h1 id="Weather">Weather Apps </h1>
+        <input type="text"  id="enterCity" placeholder="Jui Enter City...">
+         <button onclick="getWeather ()" id="getWeather" >GetWeather</button>
+         <div id="pushWeather"></div>
+         
+    </div>
+
+
+
+
+
+
+
+    <script>
+    "use strict"
+const getWeather =()=>{
+    const enterCity=document.getElementById('enterCity').value;
+    const apiKey='6271769b271f9f286efbe0b15c8cd202'
+    
+   const apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${enterCity}&appid=${apiKey}&units=metric `
+   fetch(apiUrl)
+   .then(res=> res.json())
+   .then(data=> {
+    const WearInfo=document.getElementById('pushWeather')
+    
+ 
+ const description=data.weather[0].description;
+ const temparature=data.main.temp;
+ const humidity =data.main.humidity;
+ const windSpeed=data.wind.speed;
+ 
+
+WearInfo.innerHTML=`
+
+<br><br><p> Description:&nbsp${description}</P><br>
+<h3> Temperature:&nbsp${temparature}&#8451</h3><br>
+<p> Humidity:&nbsp${humidity}%</P><br>
+<p> Wind Speed:&nbsp${windSpeed}m/s</P>
+
+
+
+`
+
+
+   })
+   .catch(error=>{
+    console.error('Jui Server ei name kono city khuje pacchena sorry',error);
+    document.getElementById('pushWeather').textContent='Jui Server ei name kono city khuje pacchena sorry';
+   })
+ 
+
+};
+
+</script>
+    
+</body>
+</html>
