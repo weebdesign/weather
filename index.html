@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programing-C</title>
     <link rel="stylesheet" href="style.css">
-//css code here
-<style>
 
-*{
+<!--     out line css -->
+    <style>
+        *{
     margin: 0%;
     padding: 0%;
 }
@@ -19,21 +20,61 @@ body{
     font-style: italic;
 
 }
+@font-face {
+    src: url('images/molle.regular\ \(1\).woff') format('woff');
+    font-family: molle;}
+
+    #infinity{
+      background:linear-gradient(rgb(255, 0, 0),rgb(0, 128, 0),rgb(0, 0, 255));
+        padding: 5px 5px;
+        border-radius: 3px;
+        border: none;
+        color: white;
+        margin-right: 9px;
+        margin-top: 6px;
+        
+    }
+    #custom{
+        background-color: seagreen;
+        padding: 5px 5px;
+        border-radius: 3px;
+        border: none;
+        color: white;
+        margin-right: 9px;
+        
+    }
+
+    #customColor{
+        /* width: 50px; */
+       
+       
+          padding: 5px 5px;
+          border-radius: 3px;
+          border: none;
+          color: white;
+          margin-left: 0px;
+          display: inline;
+          color: #000;
+      }
+
 .container{
-    width: 500px;
+    width: 1000px;
     margin: 5rem auto;
     text-align: center;
-    color: #fff;
+    color: aliceblue;
     
 }
 h1{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    /* font-family: molle; */
+   
 }
 #enterCity{
     margin-left: 7px;
     padding: 5px 5px;
-    font-size: 18px;
+    font-size: 14px;
     border-radius: 6px;
+    border: none;
    
 }
 #pushWeather {
@@ -44,51 +85,267 @@ h1{
 #getWeather{
     margin-left: 7px;
     padding: 5px 5px;
-    font-size: 18px;
+    font-size: 14px;
     border-radius: 6px;
     border: none;
 }
-</style>
+/* background css */
+#container{
+    width: 450px;
+    /* height: 40rem; */
+     text-align: center;
+     /* background-color: #161F32; */
+     background-color:#a900a6;
+    color: #fff;
+    margin: auto;
+    margin-top: 10px;
+    
+    box-shadow: 5px;
+    border-radius: 5px;
+      position: relative;
+      /* overflow:hidden; */
+    
+     /* font-family: molle; */
+     box-shadow:  5px ;
+   }
+   .weather{
+   width: 80%;
+   padding: 5px 2px;
+   /* background-color:rgba(0, 128, 128, 0.28); */
+   background-color: #23a2ec43;
+  border-radius: 5px;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 5rem;
+   margin-left: 9%;
+   
+   }
+
+   .jui {
+    background-color: #4d204c;
+   display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+ .jui code{
+    font-family: molle;
+    font-size: 18px;
+    opacity: 0.04;
+ /* color:#ffffffb8;  */
+ text-shadow: 5px 2px #000;
+ margin-top: 5px;
+    
+  
+
+}
+
+/* custom color csss */
+.chngBg .inputGroup .newColorInput{
+    background-color: #fff;
+    width: 300px;
+    height: 20px;
+    border-radius:  25px 0 0 25px ;
+    border: none;
+    padding: 0 5px ;
+    outline: none;
+    cursor: pointer;
+    font-size: 11px;
+}
+.chngBg .inputGroup .btn{
+    background-color: teal;
+    color: #fff;
+    width: 90px;
+    height: 20px;
+    border-radius: 0 25px 25px 0;
+    margin-left: -5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+h3{
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+    /* font-weight: 500; */
+}
+h2{
+    color:#a900a6
+}
+        
+    </style>
+
+
 </head>
-<body>
-    <div class="container" style="margin-top: 2rem;">
+<body id="bgColor">
 
-        <h1 id="Weather">Weather Apps </h1>
-        <input type="text"  id="enterCity" placeholder="Jui Type Enter City or Country...">
-         <button onclick="getWeather ()" id="getWeather" >GetWeather</button>
-         <div id="pushWeather"></div>
-         
-    </div>
+    <div id="container">
 
+       
+          <marquee behavior="" direction="" style="color:white; font-family: Arial, sans-serif; width: 90%;">Weather apps for  Mahana</marquee>
+          <div class="colorBtn">
+            <button id="infinity">Infinity-color</button>
+            <!-- <button id="custom">Custom-color</button>
+            <input type="text" id="customColor" placeholder="Type color name..."> -->
 
+          </div>
+          <section class="sec">
+            <div class="box">
+                <form action="" class="chngBg">
+                    <h3>Jui type any color name example red or #65204c or rgb(255,155,50) or rgba(255,155,50,0.5)</h3></h3>
+                    <div class="inputGroup">
+                        <input type="text" name="" id="" autocomplete="off"
+                        class="newColorInput" placeholder=" Jui type any color name or #65204c or rgb(255,55,0.5)">
+                        <input type="submit" value="Change" class="btn">
+                    </div>
+                </form>
+            </div>
+          </section>
+       
+       
+        <div class="jui" id="mahana" style="background-color: #4d204c;">
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+             <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+             <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+             <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+             <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>  
+            <code>Jui</code>  <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> 
+            <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code> <code>Jui</code>
+            
+            
+            
 
+        
+        
+        <div class="weather">
 
+            <h1 id="Weather">Weather Apps </h1>
+            <input type="text"  id="enterCity" placeholder="Jui type Enter City...">
+             <button onclick="getWeather ()" id="getWeather" >GetWeather</button>
+             <div id="pushWeather"></div></div>
+            
+             
+        </div>
+                    </div>
+                </div>
 
-
+    
 
     <script>
-    "use strict"
+        // custom color code
+        // customColor js code//  
+
+let section=document.querySelector('.sec');
+let con=document.getElementById("mahana");
+let button=document.querySelector('.btn')
+let newColor;
+button.addEventListener('click',(e)=>{
+    e.preventDefault();
+    newColor=document.querySelector('.newColorInput').value;
+    con.style.backgroundColor=newColor
+});
+
+
+// Weather apps code
+
+"use strict"
 const getWeather =()=>{
-    const enterCity=document.getElementById('enterCity').value;
-    const apiKey='6271769b271f9f286efbe0b15c8cd202'
-    
-   const apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${enterCity}&appid=${apiKey}&units=metric `
-   fetch(apiUrl)
-   .then(res=> res.json())
-   .then(data=> {
-    const WearInfo=document.getElementById('pushWeather')
-    
- 
- const description=data.weather[0].description;
- const temparature=data.main.temp;
- const humidity =data.main.humidity;
- const windSpeed=data.wind.speed;
- 
+const enterCity=document.getElementById('enterCity').value;
+const apiKey='6271769b271f9f286efbe0b15c8cd202'
+
+const apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${enterCity}&appid=${apiKey}&units=metric `
+fetch(apiUrl)
+.then(res=> res.json())
+.then(data=> {
+const WearInfo=document.getElementById('pushWeather')
+
+
+const description=data.weather[0].description;
+const temparature=data.main.temp;
+const humidity =data.main.humidity;
+const windSpeed=data.wind.speed;
+
 
 WearInfo.innerHTML=`
 
 <br><br><p> Description:&nbsp${description}</P><br>
-<h3> Temperature:&nbsp${temparature}&#8451</h3><br>
+<h2> Temperature:&nbsp${temparature}&#8451</h2><br>
 <p> Humidity:&nbsp${humidity}%</P><br>
 <p> Wind Speed:&nbsp${windSpeed}m/s</P>
 
@@ -97,16 +354,55 @@ WearInfo.innerHTML=`
 `
 
 
-   })
-   .catch(error=>{
-    console.error('Jui Server ei name kono city khuje pacchena sorry',error);
-    document.getElementById('pushWeather').textContent='Jui Server ei name kono city khuje pacchena sorry';
-   })
- 
+})
+.catch(error=>{
+console.error('Jui Server ei name kono city khuje pacchena sorry',error);
+document.getElementById('pushWeather').textContent='Mahana Server ei name kono city khuje pacchena sorry';
+})
+
 
 };
 
-</script>
+
+// infinityColor
+
+
+"use strict"
+window.onload=()=>{
+main();
+}
+function main(){
+
+// let customColor =document.getElementById('customColor').value;
+
+const container=document.getElementById("mahana");
+const infinityBtn=document.getElementById("infinity")
+infinityBtn.addEventListener ("click",function(){
+    const bgColor=genaratedRgbColor();
+    container.style.backgroundColor=bgColor
+
+});
+
+
+};
+
+function genaratedRgbColor(){
+const red= Math.floor(Math.random()*255);
+const green= Math.floor(Math.random()*255);
+const blue= Math.floor(Math.random()*255);
+return `rgb(${red},${green},${blue})`
+
+}
+const result =genaratedRgbColor()
+
+
+
+
+
+
+
+        
+
+        
+        </script>
     
-</body>
-</html>
