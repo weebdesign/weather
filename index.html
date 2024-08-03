@@ -190,6 +190,8 @@ h2{
 
 </head>
 <body id="bgColor">
+     <audio src="audio/button-202966.mp3" id="audio"></audio>
+    <audio src="audio/click-47609.mp3" id="getWeatherAudio"></audio>
 
     <div id="container">
 
@@ -407,6 +409,24 @@ return `rgb(${red},${green},${blue})`
 
 }
 const result =genaratedRgbColor()
+
+        // sound efect
+          const WeatherBtn=document.getElementById('weather');
+    const getWeatherAudio=document.getElementById('getWeatherAudio');
+    const letterBtn=document.getElementById('letterBtn');
+    const letterAudio=document.getElementById('letterAudio');
+   WeatherBtn.addEventListener('click',function(){
+        playAudio();
+    });
+    // letterBtn.addEventListener('click',function(){
+    //      playAudioLetter();
+    // });
+    function playAudio(){
+     getWeatherAudio.play()
+}
+// function playAudioLetter(){
+//     letterAudio.play()
+// }
 
 
 
